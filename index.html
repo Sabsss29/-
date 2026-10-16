@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808"><title>ოთოს შაურმა — შეუკვეთე ონლაინ</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="logo">◉</span><span>ოთოს<br><b>შაურმა</b></span></a>
+<nav><a href="#home">მთავარი</a><a href="#menu">მენიუ</a><a href="#location">ჩვენი მისამართი</a></nav>
+<a class="phone" href="tel:555708026">☎ 555 70 80 26</a><button class="cart-top" id="cartJump">კალათა <span id="cartCount">0</span></button></header>
+<main>
+<section class="hero" id="home"><div class="hero-copy"><p class="eyebrow">რუსთავი • გემრიელი არჩევანი</p><h1>ოთოს <em>შაურმა</em></h1><p>შეუკვეთე საყვარელი გემო მარტივად — სახლიდან ან გზაში.</p><a class="btn" href="#menu">მენიუს ნახვა <span>→</span></a></div><div class="hero-food" role="img" aria-label="შაურმის ფოტო"></div></section>
+<section class="section" id="menu"><div class="section-head"><div><p class="eyebrow">აირჩიე შენი გემო</p><h2>ჩვენი მენიუ</h2></div><span class="small-note">ფასები ლარში</span></div>
+<div class="products">
+<article class="product"><div class="food-photo shawarma-one"></div><div class="product-info"><h3>პატარა შაურმა</h3><p>კლასიკური შაურმა</p><div class="product-bottom"><strong>12 ₾</strong><button class="btn add" data-id="small">დამატება +</button></div></div></article>
+<article class="product"><div class="food-photo shawarma-two"></div><div class="product-info"><h3>სტანდარტული შაურმა</h3><p>გემრიელი და ნოყიერი</p><div class="product-bottom"><strong>14 ₾</strong><button class="btn add" data-id="standard">დამატება +</button></div></div></article>
+<article class="product"><div class="food-photo shawarma-three"></div><div class="product-info"><h3>დიდი შაურმა</h3><p>მეტი გემო და მეტი სიამოვნება</p><div class="product-bottom"><strong>18 ₾</strong><button class="btn add" data-id="large">დამატება +</button></div></div></article>
+<article class="product"><div class="food-photo fries"></div><div class="product-info"><h3>ფრი</h3><p>ხრაშუნა კარტოფილი</p><div class="product-bottom"><strong>4 ₾</strong><button class="btn add" data-id="fries">დამატება +</button></div></div></article>
+<article class="product"><div class="food-photo drinks"></div><div class="product-info"><h3>გამაგრილებელი სასმელი</h3><p>0.5 ლიტრი</p><div class="product-bottom"><strong>3 ₾</strong><button class="btn add" data-id="drink">დამატება +</button></div></div></article>
+</div></section>
+<section class="checkout-area" id="checkout"><div class="cart-panel"><div class="section-head"><div><p class="eyebrow">შენი არჩევანი</p><h2>კალათა</h2></div></div><div id="cartItems" class="cart-items"><p class="muted">კალათა ცარიელია. დაამატე მენიუდან პროდუქტი.</p></div><div class="total-line"><span>ჯამი</span><strong id="cartTotal">0 ₾</strong></div></div>
+<form id="orderForm" class="order-panel"><p class="eyebrow">ბოლო ნაბიჯი</p><h2>შეკვეთის გაფორმება</h2>
+<label>სახელი<input name="customerName" required maxlength="100" placeholder="შენი სახელი"></label>
+<label>ტელეფონის ნომერი<input name="phone" required maxlength="40" placeholder="5XX XX XX XX"></label>
+<fieldset><legend>როგორ მიიღებ შეკვეთას?</legend><label class="radio"><input type="radio" name="fulfillment" value="delivery" checked> მიტანა მისამართზე</label><label class="radio"><input type="radio" name="fulfillment" value="pickup"> ადგილზე გატანა</label></fieldset>
+<label id="addressLabel">მისამართი<input name="address" maxlength="300" placeholder="ქუჩა, კორპუსი, სადარბაზო"></label>
+<fieldset><legend>გადახდის მეთოდი</legend><label class="radio"><input type="radio" name="paymentMethod" value="cash" checked> ნაღდი ფული მიღებისას</label><label class="radio"><input type="radio" name="paymentMethod" value="card"> ონლაინ ბარათით</label><p class="muted tiny">ონლაინ გადახდა ჯერ არ არის გააქტიურებული. ბარათით შეკვეთა დემო რეჟიმში არ ჩამოგაჭრით თანხას.</p></fieldset>
+<label>შენიშვნა (არასავალდებულო)<textarea name="note" rows="2" placeholder="დამატებითი სურვილი"></textarea></label>
+<button class="btn full" type="submit">შეკვეთის გაგზავნა →</button><p id="orderMessage" role="status" class="message"></p></form></section>
+<section class="location section" id="location"><div><p class="eyebrow">გვიპოვე რუსთავში</p><h2>ჩვენი მისამართი</h2><p>ზაქარია ფალიაშვილის ქუჩა 3, 7, რუსთავი — გადაამოწმე ზუსტი მისამართი საშაურმესთან.</p><a class="btn outline" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Otos+Shaurma+Rustavi">რუკაზე გახსნა ↗</a></div><div class="map-box"><span>📍</span><b>ოთოს შაურმა</b><p>რუსთავი</p></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="logo">◉</span><span>ოთოს<br><b>შაურმა</b></span></a><p>გემრიელი არჩევანი რუსთავში</p><a href="tel:555708026">555 70 80 26</a><p class="muted tiny">მენიუს ფასები და საკონტაქტო ინფორმაცია გადაამოწმეთ გამოქვეყნებამდე.</p></footer>
+<script src="/app.js"></script>
+</body></html>
